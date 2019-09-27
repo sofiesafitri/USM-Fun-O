@@ -9,6 +9,22 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.usm.fun"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.usm.fun"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.usm.fun"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.usm.fun"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.usm.fun"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.usm.fun"
     }
   },
   "dependent_plugins": {}
