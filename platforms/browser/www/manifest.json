@@ -1,0 +1,10 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "USM FUN-O",
+  "short_name": "USM FUN-O",
+  "version": "io.ionic.starter",
+  "author": "Ionic Framework Team",
+  "icons": [],
+  "start_url": "index.html"
+}

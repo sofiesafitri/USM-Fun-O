@@ -25,8 +25,8 @@
         <param name="android-package" onload="true" value="io.ionic.keyboard.CDVIonicKeyboard" />
     </feature>
     <name>USM FUN-O</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description />
+    <author email="sofiesafitrii@gmail.com" href="http://instagram.com/sofiesafitrii">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

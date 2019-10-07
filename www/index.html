@@ -1,49 +1,177 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
+<html lang="en">
     <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsenui.css">
+        <link rel="stylesheet" type="text/css" href="onsen/css/onsen-css-components.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <script type="text/javascript" src="onsen/js/onsenui.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <title>USM Fun-O</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+      <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="250px" collapse swipeable>
+          <ons-page>
+            <ons-list>
+              <ons-list-item onclick="fn.load('home.html')" tappable>
+                Home
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('settings.html')" tappable>
+                Checklist
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Navigation
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Schedule
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                News @USM
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Club & Societies
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Directory
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Contact
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+      </ons-splitter>
+      
+      <template id="home.html" >
+        <ons-page >
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <i class="material-icons" style="margin-top: 15px; color:orange;">dehaze</i>
+              </ons-toolbar-button>
             </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+            <div class="center" style="text-align:center; margin-right: 30px">
+              USM FUN-O
+            </div>
+          </ons-toolbar>
+          
+          <ons-page class="content">
+          <ons-card style="background-color: rgba(91, 87, 87, 0.44);">
+          <ons-row class="user_cover">
+            <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">check_circle</i></div>
+              <div class="username" id="user_2_name">Checklist</div>
+            </ons-col>
+            <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">navigation</i></div>
+              <div class="username" id="user_2_name">Navigation</div>
+            </ons-col>
+          </ons-row>
+          <ons-row class="user_cover">
+            <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">schedule</i></div>
+              <div class="username" id="user_2_name">Schedule</div>
+            </ons-col>
+            <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">library_books</i></div>
+              <div class="username" id="user_2_name">News @USM</div>
+            </ons-col>
+          </ons-row>
+            <ons-row class="user_cover">
+             <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">sports_basketball</i></div></div>
+              <div class="username" id="user_2_name">Club & Societies</div>
+            </ons-col>
+            <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">perm_contact_calendar</i></div></div>
+              <div class="username" id="user_2_name">Directory</div>
+            </ons-col>
+            </ons-row>
+          <ons-row class="user_cover">
+            <ons-col onclick="openHome()">
+              <div class="user_thumbnail"><i class="material-icons">chat</i></div></div>
+              <div class="username" id="user_2_name">Contact</div>
+            </ons-col>
+          </ons-row>
+          </ons-card>
+          </ons-page>
+          <style type="text/css">
+            .content{
+              margin: 20px 10px;
+              border-radius:40px;
+            }
+      
+            .user_cover {
+              padding: 10px 0px;
+              margin: auto;
+              margin-top: 10px;
+              min-height:100px;
+            }
+      
+            .username {
+              text-align: center;
+              color: #6e0a37 ;
+              width: 100px;
+              font-size: 12px;
+              margin: auto;
+              margin-top:5px;
+              font-weight:bold;
+              font-family:Helvetica;
+              border-radius:20px;
+              background-color: orange;
+              padding: 8px 0px;       
+            }
+      
+            .user_thumbnail {
+              width: 80px;
+              height: 80px;
+              display: table;
+              text-align: center;
+              margin:auto;
+            }
+      
+            .user_thumbnail  i {
+              font-size: 50px;
+              display: table-cell;
+              vertical-align: middle;
+              background-color:#6e0a37;
+              color:orange;
+              border-radius:25px;
+            }
+          </style>
+        </ons-page>
+      </template>
+      
+      <template id="settings.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              Settings
+            </div>
+          </ons-toolbar>
+        </ons-page>
+      </template>
+      
+      <template id="about.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              About
+            </div>
+          </ons-toolbar>
+        </ons-page>
+      </template>
+      <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
